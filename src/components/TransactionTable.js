@@ -1,12 +1,16 @@
 import TransactionTableBody from "./TransactionTableBody";
 import TransactionTableHeader from "./TransactionTableHeader";
 
-const TransactionTable = () => {
+const TransactionTable = ({ transactions, updateTransaction, deleteTransaction }) => {
   return (
     <div>
       <table>
         <TransactionTableHeader />
-        <TransactionTableBody />
+        <TransactionTableBody
+          transactions={transactions}
+          updateTransaction={updateTransaction}
+          deleteTransaction={deleteTransaction}
+        />
       </table>
     </div>
   );

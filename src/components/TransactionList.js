@@ -1,11 +1,15 @@
 import TransactionListHeader from "./TransactionListHeader";
 import TransactionTable from "./TransactionTable";
 
-const TransactionsList = () => {
+const TransactionsList = ({ transactions, updateTransaction, deleteTransaction }) => {
   return (
     <div>
       <TransactionListHeader />
-      <TransactionTable />
+      <TransactionTable
+        transactions={transactions}
+        updateTransaction={updateTransaction}
+        deleteTransaction={deleteTransaction}
+      />
     </div>
   );
 };
